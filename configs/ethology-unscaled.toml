@@ -1,0 +1,5 @@
+schema_version = 1
+profile = "unscaled"
+
+[organism]
+life_time_scale = 1.0

@@ -1,0 +1,23 @@
+include *.cmd setup_linux.sh constraints-tested.txt THIRD_PARTY.md
+recursive-include configs *.toml
+recursive-include scenarios *.toml
+recursive-include circuit_configs *.toml
+recursive-include semantic_configs *.toml
+recursive-include licenses *.txt
+recursive-include scripts *.py
+recursive-include tests *.py
+recursive-include circuit_tests *.py
+recursive-include compat_tests *.py
+recursive-include duel_tests *.py
+recursive-include bio_tests *.py
+recursive-include selectivity_tests *.py
+recursive-include semantic_tests *.py
+include vis-demo/search.gif vis-demo/proboscis.gif
+include vis-demo/groom-front.gif vis-demo/sleep-wake.gif
+prune .venv
+prune data
+prune runs
+prune reports
+prune docs
+prune example
+global-exclude __pycache__ *.py[cod] *.nbc *.nbi

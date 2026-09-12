@@ -1,0 +1,11 @@
+# Consumed by: python -m fly_semantic demo --semantic-config this-file.toml
+# Paths below are relative to this TOML file. CLI artifact options override them.
+# This seed binds the saved artificial input mapping, not the arena's RNG.
+[semantic]
+enabled = true
+core_mode = "frozen_core"
+seed = 42
+supported_concepts = [1]
+pulse_ms = 250
+calibration = "../runs/semantic-v1/calibration-selected"
+model = "../runs/semantic-v1/state-selected/state-readout.npz"

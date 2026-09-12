@@ -1,0 +1,27 @@
+food = []
+
+[initial]
+energy = 80.0
+sleep_pressure = 0.95
+[initial.dust_by_region]
+head = 0.0
+antenna_left = 0.0
+antenna_right = 0.0
+front_left = 0.0
+front_right = 0.0
+
+[[events]]
+kind = "wake"
+time_s = 2.0
+amplitude = 0.15
+position = [0.0, 0.0, 1.0]
+radius = 30.0
+duration_s = 0.1
+
+[[events]]
+kind = "wake"
+time_s = 3.0
+amplitude = 2.0
+position = [0.0, 0.0, 1.0]
+radius = 30.0
+duration_s = 0.1

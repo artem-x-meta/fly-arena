@@ -1,0 +1,20 @@
+# Initial scene, not an action schedule. Final geometry is validated by physics.
+[initial]
+energy = 10.0
+sleep_pressure = 0.05
+[initial.dust_by_region]
+head = 0.0
+antenna_left = 0.0
+antenna_right = 0.0
+front_left = 0.0
+front_right = 0.0
+
+[[food]]
+id = "contact_patch"
+x = 1.6
+y = 0.0
+radius = 1.1
+amount = 5.0
+energy_density = 12.0
+taste = 1.0
+odor = 1.0

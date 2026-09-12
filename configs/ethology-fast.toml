@@ -1,0 +1,13 @@
+schema_version = 1
+profile = "demo-fast"
+
+[organism]
+# Only metabolism, digestion, sleep, circadian phase and deposition use this.
+life_time_scale = 60.0
+# food_u / physical_s; never multiplied by life_time_scale.
+intake_rate = 2.0
+
+[logging]
+telemetry_hz = 10.0
+rotate_rows = 36000
+checkpoint_wall_s = 120.0

@@ -1,0 +1,8 @@
+# This file is consumed by fly_semantic, not the legacy NeuralConfig.
+[semantic]
+enabled = false
+core_mode = "frozen_core"
+seed = 42
+# Enabled runs require explicit calibrated artifacts via CLI or adapter arguments.
+supported_concepts = [1]
+pulse_ms = 250

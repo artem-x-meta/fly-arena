@@ -1,0 +1,61 @@
+schema_version = 1
+profile = "unscaled"
+
+[organism]
+life_time_scale = 1.0
+# Explicit observation rates, independent of the walking energy budget.
+gut_capacity = 3.0
+basal_metabolic_rate = 0.09
+movement_metabolic_rate = 0.06
+digestion_rate = 0.3
+tau_awake = 30.0
+tau_sleep = 8.0
+
+[motor]
+adaptive_proboscis = true
+
+[environment]
+odor_model = "filaments"
+
+[environment.plume]
+wind_speed_mm_s = 4.0
+wind_direction_deg = 180.0
+wind_swing_deg = 8.0
+wind_period_s = 12.0
+lateral_diffusion_mm2_s = 0.3
+
+[[environment.recurring_events]]
+kind = "refill"
+time_s = 15.0
+repeat_s = 15.0
+food_id = "sugar_a"
+amount = 5.0
+capacity = 10.0
+
+[[environment.recurring_events]]
+kind = "refill"
+time_s = 15.0
+repeat_s = 15.0
+food_id = "sugar_b"
+amount = 5.0
+capacity = 10.0
+
+[[environment.recurring_events]]
+kind = "dust"
+time_s = 18.0
+repeat_s = 18.0
+region = "head"
+amount = 0.6
+
+[navigation]
+strategy = "surge-cast"
+neural_weight = 0.25
+cast_first_s = 0.8
+cast_expansion_s = 0.8
+cast_max_s = 3.0
+cast_timeout_s = 30.0
+
+[behavior]
+walk_hunger_weight = 1.0
+feed_retry_delay_s = 0.8
+feed_preempts_walk = true

@@ -1,0 +1,31 @@
+# Research scene for the fixed gain-5 head, not a new default mode.
+schema_version = 1
+profile = "unscaled"
+
+[organism]
+life_time_scale = 1.0
+intake_rate = 2.8
+
+[initial]
+energy = 20.0
+sleep_pressure = 0.05
+
+[initial.dust_by_region]
+head = 0.0
+antenna_left = 0.0
+antenna_right = 0.0
+front_left = 0.0
+front_right = 0.0
+
+[motor]
+adaptive_proboscis = true
+
+[[food]]
+id = "limited_demo"
+x = 1.6
+y = 0.0
+radius = 1.1
+amount = 0.8
+energy_density = 12.0
+taste = 1.0
+odor = 1.0

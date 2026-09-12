@@ -1,0 +1,6 @@
+# Stage 1 isolation: only slow-time scale changes from the v0.2 baseline.
+schema_version = 1
+profile = "unscaled"
+
+[organism]
+life_time_scale = 1.0

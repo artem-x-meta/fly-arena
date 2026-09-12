@@ -1,0 +1,25 @@
+schema_version = 1
+profile = "unscaled"
+[organism]
+life_time_scale = 1.0
+[motor]
+adaptive_proboscis = true
+[environment]
+odor_model = "filaments"
+[environment.plume]
+wind_speed_mm_s = 4.0
+wind_direction_deg = 180.0
+wind_swing_deg = 8.0
+wind_period_s = 12.0
+lateral_diffusion_mm2_s = 0.3
+[navigation]
+strategy = "surge-cast"
+neural_weight = 0.25
+cast_first_s = 0.8
+cast_expansion_s = 0.8
+cast_max_s = 3.0
+cast_timeout_s = 30.0
+[behavior]
+walk_hunger_weight = 1.0
+feed_retry_delay_s = 0.8
+feed_preempts_walk = true

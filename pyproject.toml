@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "male-cns-arena"
+version = "0.3.0"
+description = "An experimental MaleCNS connectome and NeuroMechFly arena"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE", "THIRD_PARTY.md", "licenses/*.txt"]
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "flygym==2.1.0",
+  "mujoco==3.9.0",
+  "numpy>=2.2,<2.6",
+  "numba>=0.61,<0.68",
+  "pyarrow>=19,<26",
+  "imageio>=2.37,<3",
+  "imageio-ffmpeg>=0.6,<0.7",
+  "pillow>=11,<13",
+  "scipy>=1.15,<2",
+  "matplotlib>=3.9,<4",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+dev = ["pytest>=8,<10", "psutil>=6,<8", "build>=1,<2"]
+
+[project.scripts]
+fly-arena = "fly_arena.__main__:main"
+
+[project.urls]
+Repository = "https://github.com/artem-x-meta/fly-arena"
+Issues = "https://github.com/artem-x-meta/fly-arena/issues"
+
+[tool.setuptools.packages.find]
+include = [
+  "fly_arena*", "fly_duel*", "fly_circuit_lab*", "fly_compat*",
+  "fly_bio*", "fly_semantic*", "bio_tools*", "semantic_tools*",
+]
+exclude = ["*.__pycache__*"]
+
+[tool.setuptools.package-data]
+fly_circuit_lab = ["parameters/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

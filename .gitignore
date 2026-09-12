@@ -1,0 +1,53 @@
+# Local environments, interpreter caches, and build products.
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.nbc
+*.nbi
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+build/
+dist/
+
+# Downloaded connectomes, checkpoints, recordings, and generated reports.
+/data/
+/runs/
+/reports/
+/example/
+
+# Publish only the demonstration clips used by the public README.
+/vis-demo/*
+!/vis-demo/search.gif
+!/vis-demo/proboscis.gif
+!/vis-demo/groom-front.gif
+!/vis-demo/sleep-wake.gif
+
+# Private working documentation, specifications, and experiment notes.
+/docs/
+/*WORK_LOG*.md
+/VALIDATION.md
+/CIRCUIT_LAB.md
+/fly*-spec.md
+/fly*_spec*.md
+AGENTS.md
+CLAUDE.md
+
+# Editor state, local credentials, and temporary files.
+.vscode/
+.idea/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db

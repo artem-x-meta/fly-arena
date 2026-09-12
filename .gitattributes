@@ -1,0 +1,6 @@
+# Checkpoint and experiment fingerprints use exact source-file bytes.
+# Keep them stable across Windows and Linux checkouts.
+* -text
+*.py diff=python
+*.sh text eol=lf
+*.md text eol=lf

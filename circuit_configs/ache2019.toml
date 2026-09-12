@@ -1,0 +1,25 @@
+# Explicit, separate experiment. Existing configs and launchers are unchanged.
+schema_version = 1
+profile = "unscaled"
+
+[escape]
+enabled = true
+
+[initial]
+energy = 80.0
+sleep_pressure = 0.1
+[initial.dust_by_region]
+head = 0.0
+antenna_left = 0.0
+antenna_right = 0.0
+front_left = 0.0
+front_right = 0.0
+
+[[environment.looming]]
+id = "paper_assay"
+radius = 1.2
+start = [9.0, 5.0, 3.0]
+end = [3.6, 2.0, 2.5]
+time_s = 1.2
+duration_s = 1.0
+hold_s = 0.15

@@ -1,0 +1,11 @@
+schema_version = 1
+profile = "demo-fast"
+required_neural_pathways = ["feeding"]
+
+[initial]
+energy = 20.0
+sleep_pressure = 0.1
+
+[neural]
+# Strict mode rejects unconfirmed required pathways before a long run.
+exploratory_ports = false
