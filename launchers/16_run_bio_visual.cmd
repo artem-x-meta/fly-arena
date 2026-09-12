@@ -1,6 +1,6 @@
 @echo off
 setlocal
-cd /d "%~dp0"
+cd /d "%~dp0.."
 if not exist ".venv\Scripts\python.exe" goto missing
 ".venv\Scripts\python.exe" -m fly_bio --output "runs\bio-visual-v1\controls"
 if errorlevel 1 goto failed
@@ -14,7 +14,7 @@ echo Report: runs\bio-visual-v1\RESULTS.md
 pause
 exit /b 0
 :missing
-echo Run 01_setup_windows.cmd first.
+echo Run launchers\01_setup_windows.cmd first.
 :failed
 pause
 exit /b 1

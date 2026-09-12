@@ -38,8 +38,8 @@ py -3.12 -m venv .venv
 ```
 
 The last command checks the physical body and viewer with scripted walking;
-it does not load a connectome. Alternatively, use `01_setup_windows.cmd` and
-then `02_test_body.cmd`.
+it does not load a connectome. Alternatively, use `launchers/01_setup_windows.cmd` and
+then `launchers/02_test_body.cmd`.
 
 Prepare the neural graph, then start the hybrid arena:
 
@@ -59,17 +59,20 @@ mode, **W** applies a local tactile wake stimulus. `--seconds` means simulated
 seconds; `0` keeps running until stopped. `--wall-seconds` can limit wall time
 for the hybrid arena after loading.
 
+Windows launch scripts are grouped in `launchers/`. They locate the project
+root automatically, so they can be started from any working directory.
+
 ## Available demonstrations
 
 | Launcher | Demonstration | Prepared graph needed |
 |---|---|---|
-| `02_test_body.cmd` | Scripted walking and installation check | No |
-| `04_run_connectome.cmd` | LIF activity driving descending gait commands | Yes |
-| `05_run_ethology.cmd` | Feeding, grooming, sleeping, and walking | Yes |
-| `07_run_search.cmd` | Odor-plume search with recurring food and dust | Yes |
-| `09_run_escape.cmd` | Approaching visual object and engineered escape | Yes |
-| `13_run_food_fight.cmd` | Two flies sharing a scarce food supply | No |
-| `15_run_shared_meal.cmd` | The same encounter with more food available | No |
+| `launchers/02_test_body.cmd` | Scripted walking and installation check | No |
+| `launchers/04_run_connectome.cmd` | LIF activity driving descending gait commands | Yes |
+| `launchers/05_run_ethology.cmd` | Feeding, grooming, sleeping, and walking | Yes |
+| `launchers/07_run_search.cmd` | Odor-plume search with recurring food and dust | Yes |
+| `launchers/09_run_escape.cmd` | Approaching visual object and engineered escape | Yes |
+| `launchers/13_run_food_fight.cmd` | Two flies sharing a scarce food supply | No |
+| `launchers/15_run_shared_meal.cmd` | The same encounter with more food available | No |
 
 The `demo-fast` profile accelerates organism processes such as metabolism and
 sleep pressure by 60 times. Physics and neural time retain their normal scale.

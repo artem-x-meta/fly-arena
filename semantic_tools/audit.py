@@ -54,7 +54,7 @@ def protected_paths():
         selected.extend((ROOT / directory).glob("*.py"))
     for directory in ("configs", "scenarios", "circuit_configs"):
         selected.extend((ROOT / directory).glob("*.toml"))
-    selected.extend(ROOT.glob("[0-1][0-9]_*.cmd"))
+    selected.extend((ROOT / "launchers").glob("[0-1][0-9]_*.cmd"))
     selected.extend(ROOT / name for name in ("pyproject.toml", "constraints-tested.txt"))
     selected.extend(ROOT / name for name in SNAPSHOTS)
     selected.extend((ROOT / "data" / "graph").glob("*"))

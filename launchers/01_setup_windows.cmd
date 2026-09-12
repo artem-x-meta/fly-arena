@@ -1,6 +1,6 @@
 @echo off
 setlocal
-cd /d "%~dp0"
+cd /d "%~dp0.."
 py -3.12 --version
 if errorlevel 1 goto python_missing
 py -3.12 -m venv .venv
@@ -9,7 +9,7 @@ if errorlevel 1 goto failed
 if errorlevel 1 goto failed
 .venv\Scripts\python.exe -m pip install -e .
 if errorlevel 1 goto failed
-echo Ready. Run 02_test_body.cmd next.
+echo Ready. Run launchers\02_test_body.cmd next.
 pause
 exit /b 0
 :python_missing
